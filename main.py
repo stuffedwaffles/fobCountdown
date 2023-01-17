@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import * 
 import sched
 
-
+#add a hooray at the end
 
 
 windowHeight = 300
@@ -18,7 +18,7 @@ app = QApplication([])
 est = timezone("US/Eastern")
 pst = timezone("US/Pacific")
 
-release_timePST = dt(2023,1,18,3,0,0,0)
+release_timeEST = dt(2023,1,18,10,0,0,0)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -48,7 +48,7 @@ class MainWindow(QMainWindow):
         current_est = dt.now()
         current_pst = dt.now(pst)
 
-        tdelta = release_timePST- current_est
+        tdelta = release_timeEST- current_est
         s = tdelta.seconds
         hours, remainder = divmod(s, 3600)
         minutes, seconds = divmod(remainder, 60)
