@@ -18,13 +18,15 @@ app = QApplication([])
 est = timezone("US/Eastern")
 pst = timezone("US/Pacific")
 
-release_timeEST = dt(2023,1,25,3,0,0,0)
+
+release_timeEST = dt(2023,3,24,10,0,0,0)
+concerttimeEST = dt(2023,7,21,7,0,0,0)
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("heartbreak feels so good")
+        self.setWindowTitle("so much (for) stardust")
         self.setMinimumSize(QSize(windowWidth, windowHeight))
         self.setStyleSheet("background-color : black")
 
